@@ -112,24 +112,24 @@ fonts.css: 255kB - transferred over network, 339kB - resource size
 
 - **First Paint - 577.2 ms**
 
-![](./Performance/FirstPaint.png)
+![](./Performance/screenShots/FirstPaint.png)
 
 - **First Contentful Paint - 577.2 ms**
 
-![](./Performance/FirstContentfulPaint.png)
+![](./Performance/screenShots/FirstContentfulPaint.png)
 
 - **Largest Contentful Paint - 758.9 ms**
 
-![](./Performance/LargestContentfulPaint.png)
+![](./Performance/screenShots/LargestContentfulPaint.png)
 
 - **DOMContentLoaded Event - 2.0 s**
 - **Event - 2.79 s**
 
-![](./Performance/DCL_Load.png)
+![](./Performance/screenShots/DCL_Load.png)
 
 ### **_2.3 DOM-элемент, на котором происходит LCP_**
 
-![](./Performance/LCP_dom-element.png)
+![](./Performance/screenShots/LCP_dom-element.png)
 
 ### **_2.4 Времени, которое тратится на разные этапы обработки документа_**
 
@@ -138,7 +138,7 @@ fonts.css: 255kB - transferred over network, 339kB - resource size
 - **Rendering - 156 ms**
 - **Painting - 15 ms**
 
-![](./Performance/summary.png)
+![](./Performance/screenShots/summary.png)
 
 ## **3. Coverage**
 
