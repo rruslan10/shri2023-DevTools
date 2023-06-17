@@ -157,3 +157,64 @@ fonts.css: 255kB - transferred over network, 339kB - resource size
 - **Unused JS - 2.3 MB**
 
 ![](./Coverage/unused_JS.png)
+
+# **Анализ при замедлении CPU 4x slowdown и эмуляции сети Slow 3G**
+
+## **1. Network**
+
+### **_1.1 Профиль загрузки ресурсов при открытии страницы_**
+
+[HAR архив](./SlowNetwork/www.gd.ru-slow.har)
+
+### **_1.2 Неоптимальные места_**
+
+Всё тоже самое, что и при первом тесте, только дольше.
+
+![](./SlowNetwork/network-slow.png)
+
+## **2. Performance**
+
+### **_2.1 Профиль загрузки страницы_**
+
+[Profile-slow.json](./SlowNetwork/Profile-slow.json)
+
+### **_2.2 Время от начала навигации до событий:_**
+
+- **First Paint - 9460.1 ms**
+
+![](./SlowNetwork/fp-slow.png)
+
+- **First Contentful Paint - 9460.1 ms**
+
+![](./SlowNetwork/fcp-slow.png)
+
+- **Largest Contentful Paint - 12632.9 ms**
+
+![](./SlowNetwork/lcp-slow.png)
+
+- **DOMContentLoaded Event - 27162.9 ms**
+
+![](./SlowNetwork/domload-slow.png)
+
+- **Event - 51.55 s**
+
+![](./SlowNetwork/load-slow.png)
+
+### **_2.3 DOM-элемент, на котором происходит LCP_**
+
+![](./SlowNetwork/lcp-element.png)
+
+### **_2.4 Времени, которое тратится на разные этапы обработки документа_**
+
+- **Loading - 366 ms**
+- **Scripting - 13244 ms**
+- **Rendering - 4718 ms**
+- **Painting - 739 ms**
+
+![](./SlowNetwork/summary-slow.png)
+
+## **3. Coverage**
+
+Всё тоже самое, что и при первом тесте
+
+![](./SlowNetwork/coverage-slow.png)
